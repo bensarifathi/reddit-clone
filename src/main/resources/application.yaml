@@ -1,0 +1,33 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings.trace: false
+      settings.web-allow-others: false
+  datasource:
+    url: jdbc:h2:file:./reddit.db
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate.ddl-auto: update
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 2525
+    username: 24246e27b3a90a
+    password: 065e212a7466dc
+    protocol: smtp
+  security:
+    user:
+      username: fathi
+      password: password
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+
